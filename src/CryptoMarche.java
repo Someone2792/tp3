@@ -25,11 +25,16 @@ public class CryptoMarche {
      * @return capital en euros du propriétare.
      */
     public double capitalEnEuros(String proprietaire){
-        /**
-			FONCTION À IMPLEMENTER
-        **/
-
-        return 0;
+        double capital = 0.0;
+        
+        for(int i = 0; i < portefeuilles.size(); i++)
+        {
+        	if (portefeuilles.get(i).getProprietaire().equals(proprietaire))
+        	{
+        		capital += portefeuilles.get(i).valeurEnEuros();
+        	}
+        }
+        return capital;
     }
 
     /**
@@ -40,11 +45,17 @@ public class CryptoMarche {
      * @return capital total en circulation de la cryptomonnaie (en euros).
      */
     public double capitalMonneaie(Cryptomonnaie monnaie){
-        /**
-			FONCTION À IMPLEMENTER
-        **/
-
-        return 0;
+    	
+    	double total = 0.0;
+        for(int i = 0; i < portefeuilles.size(); i++)
+        {
+        	if (portefeuilles.get(i).getMonnaie().equals(monnaie))
+        	{
+        		total += portefeuilles.get(i).valeurEnEuros();
+        	}
+        }
+        
+        return total;
 
     }
 
