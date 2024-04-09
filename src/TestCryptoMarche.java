@@ -18,7 +18,7 @@ public class TestCryptoMarche {
 
         //Transfert des monnaies entre portefeuilles
         aliceBtc.transfertDevise(antoineBtc, 2);
-        aliceBtc.transfertDevise(antoineBtc, 10); 
+        aliceBtc.transfertDevise(antoineBtc, 10);
         aliceBtc.transfertDevise(antoineEth, 1); 
 
         //Test Portefeuille
